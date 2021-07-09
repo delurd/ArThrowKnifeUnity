@@ -56,6 +56,7 @@
      <Compile Include="Assets\Script\FollowTarget.cs" />
      <Compile Include="Assets\Script\gameOver.cs" />
      <Compile Include="Assets\Script\gameOverScreen.cs" />
+     <Compile Include="Assets\Script\Pause.cs" />
      <Compile Include="Assets\Script\pointCount.cs" />
      <Compile Include="Assets\Script\quit.cs" />
      <Compile Include="Assets\Script\RandomSpawnerV.cs" />

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class pointCount : MonoBehaviour
 {
-    public int pointValue = 0;
+    public int pointValue ;
     public Text point;
+
+    RandomSpawnerV RSV;
 
 
     // Start is called before the first frame update
@@ -21,6 +23,12 @@ public class pointCount : MonoBehaviour
     void Update()
     {
         point.text = "Score : " + pointValue.ToString();
+
+
+        if(pointValue % 10 == 0)
+        {
+
+        }
     }
 
 

@@ -18,6 +18,8 @@ public class RandomSpawnerV : MonoBehaviour
 
     private float objX, objY, objZ;
 
+    public bool run = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,15 +30,19 @@ public class RandomSpawnerV : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > timetospawn)
+        if(run == true)
         {
-            timer = 0;
-            timetospawn = Random.Range(mintimer, maxtimer);
-            Debug.Log(timetospawn);
-            RandomPosition();
-            Spawn(Random.Range(0, enemies.Length));
+            timer += Time.deltaTime;
+            if (timer > timetospawn)
+            {
+                timer = 0;
+                timetospawn = Random.Range(mintimer, maxtimer);
+                Debug.Log(timetospawn);
+                RandomPosition();
+                Spawn(Random.Range(0, enemies.Length));
+            }
         }
+        
     }
     void RandomPosition()
     {

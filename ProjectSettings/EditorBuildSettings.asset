@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/throwKnife.unity
     guid: bf6a6836822c15944a372032d80f39c9
+  - enabled: 0
+    path: Assets/SampleScene.unity
+    guid: 2cebd54cfa4ef7e498ba243fb9240140

@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class gameOver : MonoBehaviour {
 
-	public gameOverScreen gameOverScreen;
+	public gameOverScreen GameOverScreen;
 	// Use this for initialization
-	void Start () {
-	
-	}
 
 	// Update is called once per frame
 
 	public void GameOver()
     {
-		gameOverScreen.Over();
+		GameOverScreen.Over();
     }
 }

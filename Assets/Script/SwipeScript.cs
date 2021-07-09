@@ -24,6 +24,9 @@ public class SwipeScript : MonoBehaviour
 
 	RestartScene restartScene;
 
+	RandomSpawnerV rsv;
+
+
 
 
 	void Start()
@@ -32,10 +35,9 @@ public class SwipeScript : MonoBehaviour
 		Pointcount = FindObjectOfType<pointCount>();
 		failCount = FindObjectOfType<FailCount>();
 		spawnBall = FindObjectOfType<SpawnBall>();
+		rsv = FindObjectOfType<RandomSpawnerV>();
 
 
-
-		restartScene = FindObjectOfType<RestartScene>();
 
 
 		rb = GetComponent<Rigidbody>();
@@ -82,11 +84,12 @@ public class SwipeScript : MonoBehaviour
 			// add force to balls rigidbody in 3D space depending on swipe time, direction and throw forces
 			rb.isKinematic = false;
 			rb.AddForce(-direction.x * throwForceInXandY, -direction.y * throwForceInXandY, throwForceInZ / timeInterval);
+
 			//rb.AddTorque(Vector3.down * 2);
-
 			//transform.Rotate(Vector3.right * 2);
-
 			//StartCoroutine(tunggudulu());
+
+			rsv.run = true;
 		}
 
 
